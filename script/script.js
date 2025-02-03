@@ -13,6 +13,11 @@ function update(){
   const min = today.format('mm');
   const week = today.format('ddd');
   const sec = today.format('ss');
+  const ampm = today.format('A');
+  let weekCheck = today.format('D');
+  
+  
+  document.querySelector(`.day${weekCheck}`).classList.add('dayActive');
 
   showDot = !showDot;
 
@@ -21,21 +26,23 @@ function update(){
   }else{
     dot.classList.remove('invsible');
   }
-  if(showDot){
-    dot2.classList.add('invsible');
-  }else{
-    dot2.classList.remove('invsible');
-  }
+  // if(showDot){
+  //   dot2.classList.add('invsible');
+  // }else{
+  //   dot2.classList.remove('invsible');
+  // }
   
-  let weekHtml = `${week}`;
+  // let weekHtml = `${week}`;
+  let ampmHtml = `${ampm}`;
   let hourHtml = `${hour}`;
   let minHtml = `${min}`;
-  let secHtml = `${sec}`;
-  document.querySelector('.day').innerHTML = weekHtml;
+  // let secHtml = `${sec}`;
+  // document.querySelector('.day').innerHTML = weekHtml;
+  document.querySelector('.ampm').textContent = ampmHtml;
   document.querySelector('.hour').textContent = hourHtml;
   document.querySelector('.min').textContent = minHtml;
-  document.querySelector('.sec').textContent = secHtml;
+  // document.querySelector('.sec').textContent = secHtml;
 };
 
-setInterval(update, 500);
+setInterval(update, 1000);
 // update();

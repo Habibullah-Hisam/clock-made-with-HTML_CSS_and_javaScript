@@ -1,40 +1,70 @@
 body{
-  font-family: Arial, Helvetica, sans-serif;
   background-color: black;
 }
 
-.all{
+.container{
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 25px;
 }
+
 .digital-clock{
   margin-top: 25px;
   display: flex;
-  border: 5px solid rgb(99, 99, 99);
-  padding: 8px;
+  border: 3px solid rgb(99, 99, 99);
+  padding: 25px;
   border-radius: 10px;
 }
 
-.week{
+.week
+{
+  font-family: "Poppins", serif;
+  font-weight: 200;
+  font-style: normal;
   display: flex;
-  padding-left: 15px;
-  padding-right: 10px;
   flex-direction: column;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+  margin-right: 45px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   width: 10px;
+  color: white;
+}
+
+.day{
+  color: rgba(185, 185, 185, 0.8);
+}
+
+.dayActive{
   font-weight: bold;
   color: white;
 }
 
+.ampm{
+  font-family: "Poppins", serif;
+  font-weight: 200;
+  font-style: normal;
+  display: inline-block;
+  width: 10px;
+  color: white;
+  margin-top: 25%;
+  margin-right: 10px;
+}
+
 .time{
-  font-family: "Hack";
+  font-family: "Bebas Neue", serif;
+  font-weight: bold;
+  font-style: normal;
   height: 100%;
   color: white;
   padding: 0px;
-  padding-left: 10px;
+  margin-left: 50px;
+  width: 290px;
 }
 .hour,
 .dot,
