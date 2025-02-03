@@ -1,0 +1,58 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+.all{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 25px;
+}
+.digital-clock{
+  margin-top: 25px;
+  display: flex;
+  border: 5px solid rgb(99, 99, 99);
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.week{
+  display: flex;
+  padding-left: 15px;
+  padding-right: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.time{
+  font-family: "Hack";
+  height: 100%;
+  color: white;
+  padding: 0px;
+  padding-left: 10px;
+}
+.hour,
+.dot,
+.dot2,
+.min,
+.sec
+{
+  display: inline-block;
+  font-size: 100px;
+  height: 100%;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.min{
+  display: math;
+}
+
+.invsible{
+  visibility: hidden;
+}
