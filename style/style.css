@@ -58,12 +58,12 @@ body{
 
 .day11{
   color: rgba(122, 122, 122, 0.7);
-  opacity: .8;
+  opacity: .78;
 }
 
 .day12{
-  color: rgba(87, 87, 87, 0.4);
-  opacity: .5;
+  color: rgba(121, 121, 121, 0.5);
+  opacity: .6;
 }
 
 .day11,
@@ -79,7 +79,7 @@ body{
   align-items: center;
   width: 10px;
   color: white;
-  margin-top: 8px;
+  margin-top: 7px;
   padding-right: 12px;
   padding-left: 12px;
 }
