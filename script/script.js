@@ -49,20 +49,12 @@ function update(){
   }else{
     dot.classList.remove('invsible');
   }
-  // if(showDot){
-  //   dot2.classList.add('invsible');
-  // }else{
-  //   dot2.classList.remove('invsible');
-  // }
   let ampmHtml = `${ampm}`;
   let hourHtml = `${hour}`;
   let minHtml = `${min}`;
-  // let secHtml = `${sec}`;
   document.querySelector('.ampm').textContent = ampmHtml;
   document.querySelector('.hour').textContent = hourHtml;
   document.querySelector('.min').textContent = minHtml;
-  // document.querySelector('.sec').textContent = secHtml;
 };
 
 setInterval(update, 1000);
-// update();

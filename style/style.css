@@ -2,13 +2,18 @@ body{
   background-color: rgb(0, 0, 0);
 }
 
+.firstContainer{
+  position: relative;
+  height: 100vh;
+}
 
 .container{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 50px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 
 .digital-clock{
   display: flex;
@@ -16,10 +21,11 @@ body{
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  border: 3px solid rgb(99, 99, 99);
-  padding: 12px;
-  height: 100px;
-  border-radius: 10px;
+  border: 2.5px solid rgb(99, 99, 99);
+  padding: 21px;
+  padding-bottom: 28px;
+  height: 180px;
+  border-radius: 15px;
 }
 
 .week
@@ -27,14 +33,15 @@ body{
   font-family: "Poppins", serif;
   font-weight: 200;
   font-style: normal;
+  font-size: 30px;
   display: flex;
   flex-direction: column;
   padding: 0px;
-  padding-right: 9px;
+  padding-right: 18px;
   margin: 0px;
   justify-content: top;
   align-items: left;
-  width: 40px;
+  width: 80px;
   column-gap: 0px;
 }
 
@@ -48,13 +55,9 @@ body{
 .dayActive{
   font-weight: bold;
   color: white;
+  height: 34px;
 }
 
-.dayActive,
-.day11,
-.day12{
-  height: 18px;
-}
 
 .day11{
   color: rgba(122, 122, 122, 0.7);
@@ -69,18 +72,21 @@ body{
 .day11,
 .day12{
   font-weight: 500;
+  font-size: 24px;
+  height: 30px;
 }
 
 .ampm{
   font-family: "Poppins", serif;
   font-weight: 200;
   font-style: normal;
+  font-size: 30px;
   display: inline-block;
   align-items: center;
-  width: 10px;
+  width: 18px;
   color: white;
-  margin-top: 7px;
-  padding-right: 12px;
+  margin-top: 20px;
+  padding-right: 24px;
   padding-left: 12px;
 }
 
@@ -92,24 +98,21 @@ body{
   width: 100%;
   color: white;
   padding: 0px;
+  padding-bottom: 52px;
+  margin-top: 0px;
 }
 
 .hour,
 .dot,
-.dot2,
-.min,
-.sec
+.min
 {
   display: inline-block;
-  font-size: 100px;
+  font-size: 220px;
   height: 100%;
   margin: 0px;
   padding: 0px;
 }
 
-.min{
-  display: math;
-}
 
 .invsible{
   visibility: hidden;
