@@ -16,9 +16,36 @@ function update(){
   const ampm = today.format('A');
   let weekCheck = today.format('D');
   
+  // let weekHtml = `
+  //       <div class="day day2 day22">SUN</div>
+  //       <div class="day day3 day11">MON</div>
+  //       <div class="day day4">TUE</div>
+  //       <div class="day day5 day11">WED</div>
+  //       <div class="day day6 day22">THU</div>`
+  //       ;
+  // document.querySelector('.week').innerHTML = weekHtml;
+
+  
   
   document.querySelector(`.day${weekCheck}`).classList.add('dayActive');
+  document.querySelector(`.day${weekCheck}`).textContent = week.toUpperCase();
 
+  // let i = weekCheck;
+  // let c=1,j = i-1;
+  // while(j>=i-2){
+  //   document.querySelector(`.day${j}`).textContent = "a";
+  //   document.querySelector(`.day${j}`).classList.add(`day1${c}`);
+  //   c++;
+  //   j--;
+  // }
+  // c = 1;
+  // let k = i+1;
+  // while(k<=i+2){
+  //   document.querySelector(`.day${k}`).textContent = "a";
+  //   document.querySelector(`.day${k}`).classList.add(`day1${c}`);
+  //   c++;
+  //   k++;
+  // }
   showDot = !showDot;
 
   if(showDot){
@@ -31,13 +58,10 @@ function update(){
   // }else{
   //   dot2.classList.remove('invsible');
   // }
-  
-  // let weekHtml = `${week}`;
   let ampmHtml = `${ampm}`;
   let hourHtml = `${hour}`;
   let minHtml = `${min}`;
   // let secHtml = `${sec}`;
-  // document.querySelector('.day').innerHTML = weekHtml;
   document.querySelector('.ampm').textContent = ampmHtml;
   document.querySelector('.hour').textContent = hourHtml;
   document.querySelector('.min').textContent = minHtml;
