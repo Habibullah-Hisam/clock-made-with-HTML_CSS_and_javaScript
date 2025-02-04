@@ -15,37 +15,33 @@ function update(){
   const sec = today.format('ss');
   const ampm = today.format('A');
   let weekCheck = today.format('D');
+  const weekDay = today.day();
   
-  // let weekHtml = `
-  //       <div class="day day2 day22">SUN</div>
-  //       <div class="day day3 day11">MON</div>
-  //       <div class="day day4">TUE</div>
-  //       <div class="day day5 day11">WED</div>
-  //       <div class="day day6 day22">THU</div>`
-  //       ;
-  // document.querySelector('.week').innerHTML = weekHtml;
+  const daysOfWeek = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
   
   
-  document.querySelector(`.day${weekCheck}`).classList.add('dayActive');
-  document.querySelector(`.day${weekCheck}`).textContent = week.toUpperCase();
+  document.querySelector(`.day${weekDay + 1}`).classList.add('dayActive');
+  document.querySelector(`.day${weekDay + 1}`).textContent = week.toUpperCase();
 
-  // let i = weekCheck;
-  // let c=1,j = i-1;
-  // while(j>=i-2){
-  //   document.querySelector(`.day${j}`).textContent = "a";
-  //   document.querySelector(`.day${j}`).classList.add(`day1${c}`);
-  //   c++;
-  //   j--;
-  // }
-  // c = 1;
-  // let k = i+1;
-  // while(k<=i+2){
-  //   document.querySelector(`.day${k}`).textContent = "a";
-  //   document.querySelector(`.day${k}`).classList.add(`day1${c}`);
-  //   c++;
-  //   k++;
-  // }
+  let c = 1;
+  let j = weekDay - 1;
+  while (j >= 0 && j >= weekDay - 2) {
+    document.querySelector(`.day${j + 1}`).textContent = daysOfWeek[j];
+    document.querySelector(`.day${j + 1}`).classList.add(`day1${c}`);
+    c++;
+    j--;
+  }
+
+  c = 1;
+  let k = weekDay + 1;
+  while (k <= 6 && k <= weekDay + 2) {
+    document.querySelector(`.day${k + 1}`).textContent = daysOfWeek[k];
+    document.querySelector(`.day${k + 1}`).classList.add(`day1${c}`);
+    c++;
+    k++;
+  }
+
   showDot = !showDot;
 
   if(showDot){
