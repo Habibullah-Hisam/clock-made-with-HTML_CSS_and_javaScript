@@ -12,9 +12,9 @@ function update(){
   const hour = today.format('hh');
   const min = today.format('mm');
   const week = today.format('ddd');
-  const sec = today.format('ss');
+  // const sec = today.format('ss');
   const ampm = today.format('A');
-  let weekCheck = today.format('D');
+  // let weekCheck = today.format('D');
   const weekDay = today.day();
   
   const daysOfWeek = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
