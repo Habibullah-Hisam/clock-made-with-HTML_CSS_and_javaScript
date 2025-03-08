@@ -3,7 +3,7 @@ const $ = (selector) => {
 }
 
 const dot = $('.dot');
-const dot2 = $('.dot2');
+// const dot2 = $('.dot2');
 let showDot = true;
 
 function update(){
@@ -18,7 +18,7 @@ function update(){
   const weekDay = today.day();
   
   const daysOfWeek = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
-
+  let todayArray=[];
   
   
   document.querySelector(`.day${weekDay + 1}`).classList.add('dayActive');
@@ -33,14 +33,14 @@ function update(){
     j--;
   }
 
-  c = 1;
-  let k = weekDay + 1;
-  while (k <= 6 && k <= weekDay + 2) {
-    document.querySelector(`.day${k + 1}`).textContent = daysOfWeek[k];
-    document.querySelector(`.day${k + 1}`).classList.add(`day1${c}`);
-    c++;
-    k++;
-  }
+  // c = 1;
+  // let k = weekDay + 1;
+  // while (k <= 6 && k <= weekDay + 2) {
+  //   document.querySelector(`.day${k + 1}`).textContent = daysOfWeek[k];
+  //   document.querySelector(`.day${k + 1}`).classList.add(`day1${c}`);
+  //   c++;
+  //   k++;
+  // }
 
   showDot = !showDot;
 
@@ -57,4 +57,5 @@ function update(){
   document.querySelector('.min').textContent = minHtml;
 };
 
+update();
 setInterval(update, 1000);
